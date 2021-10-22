@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">T03_inicio</string>
+    <string name="main_text">Primera aplicacion de Android</string>
+    <string name="button_text">Pulsar</string>
 </resources>
