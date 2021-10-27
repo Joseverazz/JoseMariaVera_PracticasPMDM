@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button botonSaludar;
+    private Button botonSaludar, botonDespedida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +20,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void acciones() {
-        botonSaludar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Primer mensaje", Toast.LENGTH_SHORT).show();
-            }
-        });
+        botonSaludar.setOnClickListener(this);
+        botonDespedida.setOnClickListener(this);
     }
 
     private void instancias(){
         botonSaludar = findViewById(R.id.botonSaludar);
+        botonDespedida = findViewById(R.id.botonDespedida);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.botonSaludar:{
+                Toast.makeText(getApplicationContext(),
+                        getResources().getString(R.string.hola) , Toast.LENGTH_SHORT).show();
+                break;
+            }
+            case R.id.botonDespedida:{
+                Toast.makeText(getApplicationContext(),
+                        getResources().getString(R.string.adios) , Toast.LENGTH_SHORT).show();
+            }
+        }
+
     }
 }
