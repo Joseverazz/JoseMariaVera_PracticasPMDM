@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">JoseMariaVera</string>
+    <string name="titulo_main">Bienvenido al examen de PMYDM</string>
+    <string name="text_operando1">Operando 1</string>
+    <string name="text_operando2">Operando 2</string>
+    <string name="text_boton_suma">suma</string>
+    <string name="text_boton_resta">resta</string>
+    <string name="text_boton_multiplicacion">multiplicacion</string>
+    <string name="text_boton_division">division</string>
+    <string name="text_boton_modulo">modulo</string>
+    <string name="text_boton_resultado">Ver resultado</string>
+    <string name="text_boton_volver">Volver a operar</string>
+    <string name="text_tipo">Tipo operacion</string>
+    <string name="text_resultado">Resultado</string>
+    <string name="fallo">Falta algun valor</string>
+</resources>

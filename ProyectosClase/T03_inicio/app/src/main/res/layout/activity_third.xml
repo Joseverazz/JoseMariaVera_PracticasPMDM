@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context=".ThirdActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cambio de pantallas"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_nombre"
+        android:inputType="text"
+        android:hint="Introduce Nombre"
+        android:drawableLeft="@android:drawable/ic_menu_agenda"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_apellido"
+        android:inputType="text"
+        android:hint="Introduce Apellido"
+        android:drawableLeft="@android:drawable/ic_menu_directions"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_telefono"
+        android:inputType="number"
+        android:hint="Introduce Telefono"
+        android:drawableLeft="@android:drawable/ic_menu_call"
+        android:textAlignment="center"
+        android:maxLength="9"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check_experiencia"
+        android:text="Experiencia"
+        android:checked="false"
+        android:layout_marginBottom="40dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:id="@+id/boton_registrar"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:id="@+id/imagen_experiencia"
+        />
+
+</LinearLayout>
