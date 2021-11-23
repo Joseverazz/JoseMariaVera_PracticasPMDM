@@ -1,9 +1,11 @@
 package com.josemaria.practicajuego;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -28,8 +30,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void acciones() {
         botonInicio.setOnClickListener(this);
-        textContador.setText("0");
-        checkPractica.setChecked(true);
     }
 
     private void instancias(){
@@ -47,10 +47,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 Intent intent = new Intent(getApplicationContext(), GameActivity.class);
                 intent.putExtra("practica",practica);
+                if (practica){
+                    startActivityForResult(intent,1);
+                }else
+                {
+                    startActivityForResult(intent,0);
+                }
 
-                //startActivity(intent);
 
                 break;
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        int nRecord = data.getExtras().getInt("puntos");
+        if (requestCode == 0){
+            textContador.setText(String.valueOf(Math.max(nRecord, Integer.parseInt(textContador.getText().toString()))));
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
