@@ -32,7 +32,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/text_toggle"
+            android:id="@+id/textBoton"
             android:textSize="20dp"
             android:gravity="center">
 
@@ -59,49 +59,70 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/text_check"
+            android:id="@+id/textCheck"
             android:textSize="20dp"
-            android:gravity="center">
+            android:gravity="center"
+            >
 
         </TextView>
+
+
+
     </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:layout_height="wrap_content">
+
         <RadioGroup
+            android:id="@+id/grupo_radios"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RadioButton
+                android:id="@+id/radio_uno"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Opcion 1"/>
+                android:layout_height="wrap_content"
+                android:text="Opcion 1" />
+
             <RadioButton
+                android:id="@+id/radio_dos"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Opcion 2"/>
+                android:layout_height="wrap_content"
+                android:text="Opcion 2" />
+
             <RadioButton
+                android:id="@+id/radio_tres"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Opcion 3"/>
+                android:layout_height="wrap_content"
+                android:text="Opcion 3" />
+
+
         </RadioGroup>
+
         <TextView
+            android:id="@+id/texto_grupo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/text_radio"
-            android:textSize="20dp"
-            android:gravity="center">
+            android:layout_gravity="center"
+            android:gravity="center" />
 
-        </TextView>
     </LinearLayout>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="10"
+        android:id="@+id/campo_cambios"
+        />
+
     <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="COMPROBAR"
-    android:id="@+id/btn_comprobar">
-    </Button>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_comprobar"
+        android:id="@+id/btnComprobar"/>
+
+
 </LinearLayout>
