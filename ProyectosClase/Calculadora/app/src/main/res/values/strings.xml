@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Calculadora</string>
+    <string name="boton_igual">=</string>
+    <string name="boton_cero">0</string>
+    <string name="boton_log">log(x)</string>
+    <string name="boton_mas">+</string>
+    <string name="boton_tres">3</string>
+    <string name="boton_dos">2</string>
+    <string name="boton_uno">1</string>
+    <string name="boton_tan">tan(x)</string>
+    <string name="boton_menos">-</string>
+    <string name="boton_seis">6</string>
+    <string name="boton_cinco">5</string>
+    <string name="boton_cuatro">4</string>
+    <string name="boton_cos">cos(x)</string>
+    <string name="boton_multiplicacion">x</string>
+    <string name="boton_nueve">9</string>
+    <string name="boton_ocho">8</string>
+    <string name="boton_siete">7</string>
+    <string name="boton_sen">sen(x)</string>
+    <string name="boton_dividir">/</string>
+    <string name="boton_modulo">%</string>
+    <string name="boton_mas_menos">+/-</string>
+    <string name="boton_borrar">C</string>
 </resources>

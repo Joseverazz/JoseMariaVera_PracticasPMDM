@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JoseMariaVera</string>
+    <string name="text_titulo_main">Seleccione el tipo de comida</string>
+    <string name="text_boton_main">VER RESULTADOS</string>
+</resources>
