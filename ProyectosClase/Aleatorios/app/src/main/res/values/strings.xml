@@ -3,4 +3,5 @@
     <string name="text_titulo">Generador de aleatorios</string>
     <string name="radio_sin_rango">Sin rango específico</string>
     <string name="radio_con_rango">Con rango específico</string>
+    <string name="text_boton_tirada">realizar tirada</string>
 </resources>

@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextView textResultado;
     private String operacion;
-    private int n1;
+    private double n1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 v.getId() == R.id.btnMenos|| v.getId()== R.id.btnMultiplicacion ||
                 v.getId() == R.id.btnDividir){
             operacion = String.valueOf(((Button) findViewById(v.getId())).getText());
-            n1 = Integer.parseInt(String.valueOf(textResultado.getText()));
+            n1 = Double.parseDouble(String.valueOf(textResultado.getText()));
             textResultado.setText("");
         }
         else if (v.getId() == R.id.btnBorrar){
@@ -97,49 +97,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             textResultado.setText("");
         }
         else if (v.getId() == R.id.btnMasMenos){
-            textResultado.setText(String.valueOf(Integer.parseInt(textResultado.getText()+"")*-1));
+            textResultado.setText(String.valueOf(Double.parseDouble(textResultado.getText()+"")*-1));
         }
         else if (v.getId() == R.id.btnCos) {
-            int res = Integer.parseInt(String.valueOf(textResultado.getText()));
+            double res = Double.parseDouble(String.valueOf(textResultado.getText()));
             textResultado.setText(String.valueOf(Math.cos(res)));
         }
         else if (v.getId() == R.id.btnSen) {
-            int res = Integer.parseInt(String.valueOf(textResultado.getText()));
+            double res = Double.parseDouble(String.valueOf(textResultado.getText()));
             textResultado.setText(String.valueOf(Math.sin(res)));
         }
         else if (v.getId() == R.id.btnLog) {
-            int res = Integer.parseInt(String.valueOf(textResultado.getText()));
+            double res = Double.parseDouble(String.valueOf(textResultado.getText()));
             textResultado.setText(String.valueOf(Math.log(res)));
         }
         else if (v.getId() == R.id.btnTan) {
-            int res = Integer.parseInt(String.valueOf(textResultado.getText()));
+            double res = Double.parseDouble(String.valueOf(textResultado.getText()));
             textResultado.setText(String.valueOf(Math.tan(res)));
         }
         else if (v.getId() == R.id.btnIgual){
-            int n2 = Integer.parseInt(String.valueOf(textResultado.getText()));
+            double n2 = Double.parseDouble(String.valueOf(textResultado.getText()));
             switch (operacion) {
                 case "+": {
-                    int res = n1 + n2;
+                    double res = n1 + n2;
                     textResultado.setText(String.valueOf(res));
                     break;
                 }
                 case "-": {
-                    int res = n1 - n2;
+                    double res = n1 - n2;
                     textResultado.setText(String.valueOf(res));
                     break;
                 }
                 case "x": {
-                    int res = n1 * n2;
+                    double res = n1 * n2;
                     textResultado.setText(String.valueOf(res));
                     break;
                 }
                 case "/": {
-                    int res = n1 / n2;
+                    double res = n1 / n2;
                     textResultado.setText(String.valueOf(res));
                     break;
                 }
                 case "%": {
-                    int res = n1 % n2;
+                    double res = n1 % n2;
                     textResultado.setText(String.valueOf(res));
                     break;
                 }
