@@ -24,6 +24,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
     private void acciones() {
         btnAleatorio.setOnClickListener(this);
+        btnGanador.setOnClickListener(this);
         btnDados.setOnClickListener(this);
     }
 
@@ -40,7 +41,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
         else if (v.getId() == R.id.boton_ganador){
-            startActivity(new Intent(getApplicationContext(),AleatoriosActivity.class));
+            Intent intent = new Intent(getApplicationContext(),GanadorActivity.class);
+            startActivity(intent);
         }
         else if (v.getId() == R.id.boton_dados){
             Intent intent = new Intent(getApplicationContext(),DadosActivity.class);

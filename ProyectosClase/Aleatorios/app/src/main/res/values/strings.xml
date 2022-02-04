@@ -4,4 +4,14 @@
     <string name="radio_sin_rango">Sin rango específico</string>
     <string name="radio_con_rango">Con rango específico</string>
     <string name="text_boton_tirada">realizar tirada</string>
+    <string name="text_hint_minimo">minimo</string>
+    <string name="text_hint_maximo">maximo</string>
+    <string name="check_decimales">Permitir decimales</string>
+    <string name="text_numero_decimales">Numero de decimales</string>
+    <string name="text_cuantos_quieres_generar">Cuantos quieres generar</string>
+    <string name="text_repetir_numeros">Repetir numeros</string>
+    <string name="text_numero_de_totales">Numero de totales</string>
+    <string name="text_agregar_un_concursante">Agregar concursante</string>
+    <string name="text_generar_ganador">Generar Ganador</string>
+    <string name="text_introduce_nombre">Introduce Nombre</string>
 </resources>
