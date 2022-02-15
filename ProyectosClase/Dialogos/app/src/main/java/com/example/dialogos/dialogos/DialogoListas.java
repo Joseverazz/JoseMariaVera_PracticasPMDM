@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -14,14 +15,13 @@ import androidx.fragment.app.DialogFragment;
 import java.util.ArrayList;
 
 public class DialogoListas extends DialogFragment {
+    private Context context;
+    private int seleccionado = -1;
+    private ArrayList<CharSequence> listaSeleccionados = new ArrayList<>();
 
-    private Context context ;
-    private int selecionado = -1;
-    private ArrayList<CharSequence> listaSeleccionados = new ArrayList<>();//elementos que voy a ir agregando
 
     @Override
     public void onAttach(@NonNull Context context) {
-
         super.onAttach(context);
         this.context = context;
     }
@@ -29,48 +29,52 @@ public class DialogoListas extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        String[] opciones = new String[]{"opcion 1","opcion 2","opcion 3"};
+        String[] opciones = new String[]{"opcion1", "opcion2", "opcion3"};
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("Dialogo de lista");
+        AlertDialog.Builder dialogoBuilder = new AlertDialog.Builder(context);
 
-        /*builder.setItems(opciones, new DialogInterface.OnClickListener() {
+        dialogoBuilder.setTitle("Dialogo Lista");
+        /*dialogoBuilder.setItems(opciones, new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(context,opciones[which],Toast.LENGTH_SHORT).show();
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(context, opciones[i], Toast.LENGTH_SHORT).show();
             }
         });*/
-
-        /*
-        builder.setSingleChoiceItems(opciones, -1, new DialogInterface.OnClickListener() {
+       /* dialogoBuilder.setSingleChoiceItems(opciones, -1,new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                selecionado = which;
-                Toast.makeText(context,opciones[selecionado],Toast.LENGTH_SHORT).show();
-                dismiss();// oculta el dialogo
+            public void onClick(DialogInterface dialogInterface, int i) {
+                seleccionado = i;
+                Toast.makeText(context, opciones[seleccionado], Toast.LENGTH_SHORT).show();
+                dismiss();//desaparece el dialogo
+            }
+        });
+        dialogoBuilder.setPositiveButton("ok",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(context, opciones[seleccionado], Toast.LENGTH_SHORT).show();
             }
         });
         */
 
-        builder.setMultiChoiceItems(opciones, new boolean[]{false, false, false}, new DialogInterface.OnMultiChoiceClickListener() {
+        dialogoBuilder.setMultiChoiceItems(opciones, new boolean[]{false, false, true}, new DialogInterface.OnMultiChoiceClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                if(isChecked){
-                    listaSeleccionados.add(opciones[which]);
-                } else {
-                    listaSeleccionados.remove(opciones[which]);
+            public void onClick(DialogInterface dialogInterface, int i, boolean b) {
+                if(b){
+                    listaSeleccionados.add(opciones[i]);
+                }else{
+                    listaSeleccionados.remove(opciones[i]);
                 }
-
             }
         });
 
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+        dialogoBuilder.setPositiveButton("ok",new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                    Toast.makeText(context,String.valueOf(listaSeleccionados.size()),Toast.LENGTH_SHORT).show();
-
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(context, String.valueOf(listaSeleccionados.size()), Toast.LENGTH_SHORT).show();
             }
         });
-        return builder.create();
+
+        return dialogoBuilder.create();
     }
 }

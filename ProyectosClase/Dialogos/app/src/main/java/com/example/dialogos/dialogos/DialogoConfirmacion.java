@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -12,12 +13,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 public class DialogoConfirmacion extends DialogFragment {
-
-    private Context context ;
+    private Context context;
 
     @Override
     public void onAttach(@NonNull Context context) {
-
         super.onAttach(context);
         this.context = context;
     }
@@ -25,32 +24,29 @@ public class DialogoConfirmacion extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        AlertDialog.Builder dialogoBuilder = new AlertDialog.Builder(context);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-
-        builder.setTitle("Dialogo confirmacion");
-        builder.setMessage("¿ Estas seguro que quieres continuar ?");
-        builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
+        dialogoBuilder.setTitle("Dialogo confirmacion");
+        dialogoBuilder.setMessage("¿Estas seguro que quieres continuar?");
+        dialogoBuilder.setPositiveButton("si",new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(context,"Pulsado si",Toast.LENGTH_SHORT).show();
-
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(context, "pulsado SI", Toast.LENGTH_SHORT).show();
             }
         });
-        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+        dialogoBuilder.setNegativeButton("no",new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(context,"Pulsado NO",Toast.LENGTH_SHORT).show();
-
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(context, "Pulsado NO", Toast.LENGTH_SHORT).show();
             }
         });
-        builder.setNeutralButton("CANCELAR", new DialogInterface.OnClickListener() {
+        dialogoBuilder.setNeutralButton("Cancelar",new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(context,"Pulsado cancelar",Toast.LENGTH_SHORT).show();
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(context, "Pulsado CANCELAR", Toast.LENGTH_SHORT).show();
             }
         });
-
-        return builder.create();
+        return dialogoBuilder.create();
     }
+
 }

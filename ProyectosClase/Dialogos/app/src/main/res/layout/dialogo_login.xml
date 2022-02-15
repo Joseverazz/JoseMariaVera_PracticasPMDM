@@ -10,51 +10,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="LOGIN"
-        android:textSize="50dp"
+        android:text="Login"
+        android:id="@+id/texto_titulo_login"
         android:gravity="center"
-        android:layout_marginBottom="100dp"
-        >
-
-    </TextView>
-
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/edit_nombre_login">
-        >
-    </EditText>
+        android:hint="usuario"
+        android:id="@+id/texto_usuario_login"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/edit_password_login">
-        >
-    </EditText>
+        android:hint="contraseña"
+        android:id="@+id/texto_contraseña_login"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"/>
     <CheckBox
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recordarme"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/edit_check_login">
-    </CheckBox>
+        android:text="Recordar contraseña"
+        android:id="@+id/check_contraseña_login"
+        android:layout_marginBottom="20dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="¿Olvido la contraseña?"
-        android:gravity="end">
-
-    </TextView>
+        android:text="¿olvidaste la contraseá?"
+        android:clickable="true"
+        android:gravity="end"
+        android:layout_marginBottom="20dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="ENTRAR"
-        android:textStyle="bold"
-        android:id="@+id/boton_login">
+        android:text="Login"
+        android:id="@+id/btn_login"/>
 
-    </Button>
+
+
 </LinearLayout>
