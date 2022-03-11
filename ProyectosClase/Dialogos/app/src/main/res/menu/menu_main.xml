@@ -2,31 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:title="Opcion1"
-        android:id="@+id/menu_Op1"/>
-    <item android:title="Opcion2"
-        android:id="@+id/menu_Op2"/>
-    <item android:title="Opcion3"
-        android:id="@+id/menu_Op3"
-        android:icon="@android:drawable/ic_dialog_map"
-        app:showAsAction="ifRoom"/>
-    <item android:title="Opcion4"
-        android:id="@+id/menu_Op4"
-        android:icon="@android:drawable/ic_dialog_alert"
-        app:showAsAction="ifRoom"/>
-
-    <item android:title="Opcion5"
-        android:id="@+id/menu_Op5"
-        app:showAsAction="ifRoom"/>
-    <item android:title="por defecto">
-        <menu>
-            <item android:title="Opcion6"
-                android:id="@+id/menu_Op6"
-                app:showAsAction="ifRoom"/>
-            <item android:title="Opcion7"
-                android:id="@+id/menu_Op7"
-                app:showAsAction="ifRoom"/>
-        </menu>
-    </item>
+    <item android:title="Sports"
+        android:id="@+id/menu_op_sports"/>
+    <item android:title="Television"
+        android:id="@+id/menu_op_television"/>
+    <item android:title="Videogames"
+        android:id="@+id/menu_op_videogames"/>
 
 </menu>

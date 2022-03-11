@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Sports"
+        android:id="@+id/menu_op_sports"
+        android:icon="@drawable/sp"
+        app:showAsAction="always"/>
+    <item android:title="Television"
+        android:id="@+id/menu_op_television"
+        android:icon="@drawable/tv"
+        app:showAsAction="always"/>
+    <item android:title="Videogames"
+        android:id="@+id/menu_op_videogames"
+        android:icon="@drawable/vg"
+        app:showAsAction="always"/>
+    <item android:title="Salir"
+        android:id="@+id/menu_op_salir"
+        app:showAsAction="always"/>
+
+</menu>

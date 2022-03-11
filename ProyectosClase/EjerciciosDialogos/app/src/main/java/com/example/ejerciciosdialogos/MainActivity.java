@@ -13,8 +13,7 @@ import android.view.MenuItem;
 
 import com.example.ejerciciosdialogos.Dialogos.Dialogo1;
 
-public class MainActivity extends AppCompatActivity implements Dialogo1.OnDialogoListener,
-D{
+public class MainActivity extends AppCompatActivity implements Dialogo1.OnDialogoListener{
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
